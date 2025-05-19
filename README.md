@@ -7,12 +7,22 @@ The repo depends on the latest plugin API (obsidian.d.ts) in Typescript Definiti
 
 **Note:** The Obsidian API is still in early alpha and is subject to change at any time!
 
-This sample plugin demonstrates some of the basic functionality the plugin API can do.
+This sample plugin serves as a demonstration of several key functionalities available through the plugin API.
+
+## Features
 - Adds a ribbon icon, which shows a Notice when clicked.
 - Adds a command "Open Sample Modal" which opens a Modal.
 - Adds a plugin setting tab to the settings page.
 - Registers a global click event and output 'click' to the console.
 - Registers a global interval which logs 'setInterval' to the console.
+
+## Project Structure
+- `main.ts`: Main entry point of the plugin, contains the plugin logic.
+- `manifest.json`: Metadata file for the plugin (ID, version, author, etc.).
+- `styles.css`: Contains CSS styles for the plugin.
+- `esbuild.config.mjs`: Configuration for the esbuild bundler.
+- `package.json`: NPM package file, lists dependencies and scripts.
+- `tsconfig.json`: TypeScript configuration file.
 
 ## First time developing plugins?
 
@@ -57,14 +67,14 @@ Quick starting guide for new plugin devs:
 
 - Copy over `main.js`, `styles.css`, `manifest.json` to your vault `VaultFolder/.obsidian/plugins/your-plugin-id/`.
 
-## Improve code quality with eslint (optional)
-- [ESLint](https://eslint.org/) is a tool that analyzes your code to quickly find problems. You can run ESLint against your plugin to find common bugs and ways to improve your code. 
-- To use eslint with this project, make sure to install eslint from terminal:
+## Improve code quality with ESLint
+- [ESLint](https://eslint.org/) is a tool that analyzes your code to quickly find problems. This is an optional step, but recommended for finding common bugs and improving code structure.
+- To use ESLint with this project, first ensure it's installed globally or as a project dependency. If you need to install it globally, run:
   - `npm install -g eslint`
-- To use eslint to analyze this project use this command:
+- To use ESLint to analyze this project use this command:
   - `eslint main.ts`
-  - eslint will then create a report with suggestions for code improvement by file and line number.
-- If your source code is in a folder, such as `src`, you can use eslint with this command to analyze all files in that folder:
+  - ESLint will then create a report with suggestions for code improvement by file and line number.
+- If your source code is in a folder, such as `src`, you can use ESLint with this command to analyze all files in that folder:
   - `eslint .\src\`
 
 ## Funding URL
